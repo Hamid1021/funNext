@@ -29,8 +29,14 @@ export default function Single_Project(prop : PropsAttr) {
                 </div>
             </div>
             <div className="project-guide flex flex-col justify-center items-center divide-y-2">
-                <h3 className="text-center font-bold text-[18px] my-3">طراح مسئله</h3>
-                <p>{Project.problemStatement}</p>
+                {
+                    Project.problemStatement?
+                    <>
+                    <h3 className="text-center font-bold text-[18px] my-3">طراح مسئله</h3>
+                    <p>{Project.problemStatement}</p>
+                    </>
+                    : null
+                }
                 {Project.problemStatementImage ? (
                     <Image
                         style={{height:"400px"}} 
