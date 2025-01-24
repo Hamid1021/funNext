@@ -1,4 +1,3 @@
-import RootLayout from "@/app/layout";
 import Single_Project from "../../../../components/Project/single_project";
 import projects from "../../data";
 
@@ -13,7 +12,4 @@ export default async function Page({params,}: {params: Promise<{ id:number, slug
             <Single_Project Project={project}/>
         )
     }
-    return <>
-        <h1>Not Found</h1>
-    </>
 }
